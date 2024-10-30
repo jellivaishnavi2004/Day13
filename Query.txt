@@ -1,0 +1,28 @@
+create table dept(   
+  deptno     number   primary key,
+  dname      varchar2(14)  
+);
+
+create table emp(   
+  empno    number  primary key  , 
+  ename    varchar2(10),   
+  deptno   number    references dept(deptno)
+);
+INSERT INTO DEPT (DEPTNO, DNAME) values(10, 'ACCOUNTING');
+INSERT INTO dept values(20, 'RESEARCH');
+INSERT INTO dept   values(30, 'SALES');
+INSERT INTO dept values(40, 'OPERATIONS;')
+INSERT INTO emp  values(7839, 'KING', 10   );
+INSERT INTO emp  values(7698, 'BLAKE',30  );
+INSERT INTO emp  values(7782, 'CLARK',10);
+INSERT INTO emp  values(7566, 'JONES',20);
+INSERT INTO emp values(7788, 'SCOTT', 20  );
+INSERT INTO emp  values(7902, 'FORD', 20  );
+INSERT INTO emp values(7369, 'SMITH',20  );
+INSERT INTO emp  values(7499, 'ALLEN', 30 );
+INSERT INTO emp  values(7521, 'WARD', 30 );
+INSERT INTO emp  values(7654, 'MARTIN',  30 );
+INSERT INTO emp  values(7844, 'TURNER', 30  );
+INSERT INTO emp  values(7876, 'ADAMS', 20  );
+INSERT INTO emp  values(7900, 'JAMES',  30);
+INSERT INTO emp  values(7934, 'MILLER',10  );
